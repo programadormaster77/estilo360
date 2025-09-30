@@ -1,0 +1,81 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables de tema por defecto (se sobrescriben con clases theme-*) */
+:root {
+  --color-primary: #5c55ee; /* indigo */
+  --bg-surface: #f8fafc;
+  --bg-surface-alt: #f1f5f9;
+  --text-muted: #6b7280;
+  --footer-bg: #0f172a;
+  --footer-text: #e6eef8;
+}
+
+/* Tema barbería (oscuro, elegante) */
+.theme-barberia {
+  --color-primary: #111827; /* negro/oscuro */
+  --bg-surface: #f8fafc; 
+  --bg-surface-alt: #ffffff;
+  --text-muted: #6b7280;
+  --footer-bg: #0b1220;
+  --footer-text: #f3f4f6;
+}
+
+/* Tema estética (pastel, claro) */
+.theme-estetica {
+  --color-primary: #db2777; /* pink */
+  --bg-surface: #fffafb;
+  --bg-surface-alt: #fff1f2;
+  --text-muted: #7c3f58;
+  --footer-bg: #2b0214;
+  --footer-text: #ffeef6;
+}
+
+/* Utility Tailwind mapping to CSS variables */
+.bg-surface { background-color: var(--bg-surface); }
+.bg-surface-alt { background-color: var(--bg-surface-alt); }
+.text-muted { color: var(--text-muted); }
+.bg-primary { background-color: var(--color-primary); }
+.text-primary { color: var(--color-primary); }
+.footer { background-color: var(--footer-bg); color: var(--footer-text); }
+
+/* Specific classes used in components */
+.primary { background-color: var(--color-primary); color: white; }
+.footer { background-color: var(--footer-bg); color: var(--footer-text); }
+.footer-text { color: var(--footer-text); }
+
+/* Make hero text responsive and centered */
+h1, h2, h3 { -webkit-font-smoothing:antialiased; }
+
+/* Small adjustments */
+.container { max-width: 1200px; margin-left:auto; margin-right:auto; }
+
+/* Ensure header spacing when fixed */
+body { padding-top: 64px; } /* header height approx, adjust if needed */
+
+
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo ligeramente transparente */
+  color: white; /* Texto visible */
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Placeholder visible */
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
+}
