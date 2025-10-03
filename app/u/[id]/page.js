@@ -12,7 +12,7 @@ import AppointmentForm from "../../../components/appointmentform";
 
 // 🎨 Estilos dinámicos según empresa
 import themes from "../../../styles/themes";
-import themes from "../../../styles/salon";
+
 
 export default function UserEmpresaPage() {
   const { id } = useParams();
