@@ -1,76 +1,69 @@
-/* 🎨 Estilos para Barbería */
+/* styles/barberia.css */
 
-body.barberia {
-  background-color: #f8f8f8;
-  font-family: 'Inter', sans-serif;
+/* HERO */
+.hero-barberia {
+  background-image: url("/images/hero-barber.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+.hero-barberia::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* overlay */
 }
 
-/* Hero */
-.barberia .hero {
-  background-image: url('/images/hero-barber.jpg');
+/* SERVICIOS */
+.services-barberia {
+  background-image: url("/images/bg-services-barber.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
 }
-
-.barberia .hero::after {
+.services-barberia::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.7);
 }
 
-.barberia .hero h1,
-.barberia .hero p {
-  color: #fff;
+/* EQUIPO */
+.team-barberia {
+  background-image: url("/images/bg-team-barber.jpg");
+  background-size: cover;
+  background-position: center;
   position: relative;
-  z-index: 2;
+}
+.team-barberia::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
 }
 
-/* Botón principal */
-.barberia .btn-primary {
-  background-color: #d97706; /* amarillo dorado */
+/* AGENDA */
+.appointment-barberia {
+  background-image: url("/images/bg-appointment-barber.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.appointment-barberia::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* MAPA */
+.map-barberia {
+  background: #f3f3f3;
+}
+
+/* FOOTER */
+.footer-barberia {
+  background: #111;
   color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-.barberia .btn-primary:hover {
-  background-color: #b45309;
-}
-
-/* Servicios */
-.barberia .services {
-  background-color: #f3f4f6;
-}
-.barberia .services .card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 16px;
-  text-align: center;
-}
-
-/* Equipo */
-.barberia .team {
-  background-color: #ffffff;
-}
-.barberia .team h2 {
-  color: #111827;
-}
-
-/* Agenda */
-.barberia .appointment {
-  background-color: #f3f4f6;
-}
-.barberia .appointment h2 {
-  color: #111827;
-}
-
-/* Footer */
-.barberia footer {
-  background-color: #111827;
-  color: #f9fafb;
-  padding: 20px 0;
-  text-align: center;
 }
