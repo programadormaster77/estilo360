@@ -1,0 +1,76 @@
+/* 🎨 Estilos para Barbería */
+
+body.salon {
+  background-color: #f8f8f8;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hero */
+.salon .hero {
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fjoseppons.com%2Fformacion%2Flos-servicios-mas-valorados-de-un-salon-de-barberia%2F&psig=AOvVaw0mC8H38DEe34NY6rouOP2x&ust=1759614022669000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCLit8pr_iJADFQAAAAAdAAAAABAE');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.salon .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.salon .hero h1,
+.salon .hero p {
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+/* Botón principal */
+.salon .btn-primary {
+  background-color: #d97706; /* amarillo dorado */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.salon .btn-primary:hover {
+  background-color: #b45309;
+}
+
+/* Servicios */
+.salon .services {
+  background-color: #f3f4f6;
+}
+.salon .services .card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+  text-align: center;
+}
+
+/* Equipo */
+.salon .team {
+  background-color: #ffffff;
+}
+.salon .team h2 {
+  color: #111827;
+}
+
+/* Agenda */
+.salon .appointment {
+  background-color: #f3f4f6;
+}
+.salon .appointment h2 {
+  color: #111827;
+}
+
+/* Footer */
+.salon footer {
+  background-color: #111827;
+  color: #f9fafb;
+  padding: 20px 0;
+  text-align: center;
+}

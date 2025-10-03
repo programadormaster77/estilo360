@@ -54,21 +54,3 @@ h1, h2, h3 { -webkit-font-smoothing:antialiased; }
 
 /* Ensure header spacing when fixed */
 body { padding-top: 64px; } /* header height approx, adjust if needed */
-
-/* ----- Correcciones de colores para Creador de Páginas ----- */
-.creador-auth input,
-.creador-auth select,
-.creador-auth textarea {
-  color: #111827 !important; /* negro */
-  background-color: #ffffff !important; /* blanco */
-}
-
-.creador-auth input::placeholder,
-.creador-auth textarea::placeholder {
-  color: rgba(17, 24, 39, 0.5) !important; /* gris */
-}
-
-.creador-auth select option {
-  color: #111827 !important;
-  background: #ffffff !important;
-}

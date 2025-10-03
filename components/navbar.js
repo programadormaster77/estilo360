@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ empresa }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -12,13 +12,16 @@ export default function Navbar() {
         {/* Logo / Nombre */}
         <div className="flex items-center gap-4">
           <a href="/" className="text-xl font-bold text-primary">Estilo360</a>
-          <span className="hidden md:inline text-sm text-slate-500">
-            Barbería Elegance
-          </span>
+          {empresa?.nombreEmpresa && (
+            <span className="hidden md:inline text-sm text-slate-500">
+              {empresa.nombreEmpresa}
+            </span>
+          )}
         </div>
 
         {/* Menú Desktop */}
         <div className="hidden md:flex items-center gap-6">
+          <a href="/home" className="hover:text-primary">Inicio</a>
           <a href="#services" className="hover:text-primary">Servicios</a>
           <a href="#barbers" className="hover:text-primary">Equipo</a>
           <a href="#appointment" className="hover:text-primary">Agendar</a>
@@ -57,6 +60,7 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden bg-white/95 border-t">
           <div className="px-4 py-4 flex flex-col gap-3">
+            <a href="/home" onClick={() => setOpen(false)}>Inicio</a>
             <a href="#services" onClick={() => setOpen(false)}>Servicios</a>
             <a href="#barbers" onClick={() => setOpen(false)}>Equipo</a>
             <a href="#appointment" onClick={() => setOpen(false)}>Agendar</a>
