@@ -1,69 +1,80 @@
-/* styles/barberia.css */
+/* 🎨 Tema de Barberías */
 
-/* HERO */
-.hero-barberia {
-  background-image: url("/images/hero-barber.jpg");
-  background-size: cover;
-  background-position: center;
+/* === HERO === */
+.hero-section {
+  background: url("/imagenes/hero-barber.jpg") center center / cover no-repeat;
   position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section h1,
+.hero-section p {
+  position: relative;
+  z-index: 10;
   color: white;
-}
-.hero-barberia::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* overlay */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* SERVICIOS */
-.services-barberia {
-  background-image: url("/images/bg-services-barber.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-.services-barberia::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.7);
+/* === SERVICIOS === */
+.services-section {
+  background: url("/imagenes/bg-servicios-barber.jpg") center/cover no-repeat;
+  padding: 5rem 0;
 }
 
-/* EQUIPO */
-.team-barberia {
-  background-image: url("/images/bg-team-barber.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-.team-barberia::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.7);
+/* === EQUIPO === */
+.team-section {
+  background: url("/imagenes/bg-equipo-barber.jpg") center/cover no-repeat;
+  padding: 5rem 0;
 }
 
-/* AGENDA */
-.appointment-barberia {
-  background-image: url("/images/bg-appointment-barber.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-.appointment-barberia::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);
+/* === CITA === */
+.appointment-section {
+  background: url("/imagenes/bg-cita-barber.jpg") center/cover no-repeat;
+  padding: 5rem 0;
 }
 
-/* MAPA */
-.map-barberia {
-  background: #f3f3f3;
+/* === MAPA === */
+.map-section {
+  background: url("/imagenes/bg-mapa-barber.jpg") center/cover no-repeat;
+  padding: 5rem 0;
 }
 
-/* FOOTER */
-.footer-barberia {
-  background: #111;
+/* === FOOTER === */
+.footer-section {
+  background: #1a1a1a;
   color: white;
+  padding: 3rem 0;
+}
+
+/* === BOTONES Y TARJETAS === */
+.btn-primary {
+  background-color: #d4af37;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #b9922c;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
 }
